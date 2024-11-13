@@ -1,42 +1,204 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* import "../../styles/index.css"; */
+body {
+  margin: 0px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+#preReleaseBody {
+  background-color: #001717;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  width: 100vw;
+}
+#preReleaseImage {
+  margin-bottom: 70px;
+}
+.scale-in-center {
+  animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+#preReleaseH1 {
+  letter-spacing: 20px;
+  position: absolute;
+  font-family: broadacre-light-1, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  font-size: 100px;
+  color: #ffffff;
+  place-self: center;
+  justify-content: center;
+  align-self: center;
+  top: 60%;
 }
+/* #video_canvas {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  width: 100vw;
+} */
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#logo_landing {
+  height: 411px;
+  width: 670px;
+  z-index: 1;
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+#CTA_span {
+  animation-delay: -1s;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-name: prova;
+  aspect-ratio: 16/9;
+  background-color: aqua;
+  display: grid;
+  height: 50px;
+  place-items: center;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 2;
 }
-
-a {
-  color: inherit;
+#CTA_span:hover {
+  background-color: rgb(77, 76, 76);
+  box-shadow: 3px;
+}
+.tracking-in-contract {
+  -webkit-animation: tracking-in-contract 0.8s
+    cubic-bezier(0.215, 0.61, 0.355, 1) 2s both;
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 2s
+    both;
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 20px;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 20px;
+    opacity: 1;
+  }
+}
+#CTA_anchor {
+  animation-delay: -1s;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-name: prova;
+  color: black;
+  cursor: default;
   text-decoration: none;
+  vertical-align: middle;
+}
+.span_parola_importante {
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#CTA_span {
+  z-index: 4;
+}
+/* Stile minimale per il form */
+form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 400px;
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+#home_hero_canvas {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: #43ba69;
+  display: grid;
+  place-items: center;
+}
+#home_hero_h1 {
+  z-index: 3;
+  position: absolute;
+}
+#home_hero_h2 {
+  z-index: 2;
+  position: absolute;
+}
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+button[type="submit"] {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  padding: 10px;
+  width: 100%;
+}
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+#CTA_anchor:hover {
+  cursor: default;
+}
+@keyframes prova {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
