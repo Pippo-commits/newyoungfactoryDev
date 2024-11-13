@@ -15,8 +15,8 @@ export default function Home() {
           id="preReleaseImage"
           src={"/SVG/Risorsa1.svg"}
           alt="suca"
-          width={500}
-          height={500}
+          width={200}
+          height={200}
           className="scale-in-center"
         ></Image>
         <h1 id="preReleaseH1" className="tracking-in-contract">
